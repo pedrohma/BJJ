@@ -72,6 +72,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\Academy.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Country.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -98,6 +101,7 @@
     <Content Include="Content\scripts\jquery-1.9.1.min.js" />
     <Content Include="Content\scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Content\scripts\home.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="fonts\glyphicons-halflings-regular.woff2" />

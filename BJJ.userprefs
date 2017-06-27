@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{4E7FC757-6BD4-4CD7-9666-09AE1CDB3C4A}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="BJJ/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="BJJ/Controllers/HomeController.cs" Line="15" Column="10" />
-      <File FileName="BJJ/Views/Shared/_Layout.cshtml" Line="33" Column="47" />
+      <File FileName="BJJ/Views/Shared/_Layout.cshtml" Line="87" Column="25" />
+      <File FileName="BJJ/Content/scripts/home.js" Line="3" Column="1" />
+      <File FileName="BJJ/Models/Academy.cs" Line="8" Column="23" />
+      <File FileName="BJJ/Models/Address.cs" Line="7" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
