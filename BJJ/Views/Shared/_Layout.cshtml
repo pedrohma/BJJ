@@ -62,15 +62,15 @@
                     <div class="panel-heading">Login</div>
                     <div class="panel-body">
                         <label>Login</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" id="login" />
                         <br/>
                         <label>Senha</label>
-                        <input type="text" class="form-control" />
+                        <input type="password" class="form-control" id="passwordLogin" />
                         <br/>
-                        <button class="btn btn-success">Login</button>
+                        <button class="btn btn-success" onclick="login();">Login</button>
                         <hr/>
                         <p style="text-align: center;">Don't have an account yet?</p>
-                        <p style="text-align: center;">Create a new one <a href="javascript:signUp()">here</a>!</p>
+                        <p style="text-align: center;">Create a new one <a href="javascript:goToSignUp()">here</a>!</p>
                     </div>
                 </div>
             </div>
@@ -80,32 +80,32 @@
                     <div class="panel-heading">Sign Up</div>
                     <div class="panel-body">
                         <label>Academy Name</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" id="academyName"/>
                         <br/>
 							<label>Academy Email</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" id="academyEmail"/>
                         <br/>
 							<label>Password</label>
-                        <input type="password" class="form-control" />
+                        <input type="password" class="form-control" id="password"/>
                         <br/>
                         <label>Street</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" id="street"/>
 							<br/>
 							<label>Zip Code</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" id="zipCode"/>
                         <br/>
 							<label>Country</label>
-                        <select class="form-control" id="sel1">
+                        <select class="form-control" id="country">
 					        <option>Brazil</option>
 					        <option>USA</option>
 					        <option>Argentina</option>
 					        <option>Mexico</option>
 					      </select>
-                        <br/>
-                        <button class="btn btn-success">Sign Up</button>
+                        <br/>@Html.ActionLink("Login", "Login", "Home", new {@class="btn btn-success"}) 
+                        <button class="btn btn-success" onclick="signUp();">Sign Up</button>
                         <hr/>
                         <p style="text-align: center;">Already have a account?</p>
-                        <p style="text-align: center;">Login <a href="javascript:login()">here</a>!</p>
+                        <p style="text-align: center;">Login <a href="javascript:goToLogin()">here</a>!</p>
                     </div>
                 </div>
             </div>
