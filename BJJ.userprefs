@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{4E7FC757-6BD4-4CD7-9666-09AE1CDB3C4A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BJJ/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BJJ/Persistence/AcademyDB.cs">
     <Files>
-      <File FileName="BJJ/Content/scripts/home.js" Line="39" Column="5" />
+      <File FileName="BJJ/Content/scripts/home.js" Line="36" Column="13" />
       <File FileName="BJJ/Models/Academy.cs" Line="9" Column="44" />
-      <File FileName="BJJ/Models/Address.cs" Line="8" Column="30" />
-      <File FileName="BJJ/Models/Country.cs" Line="4" Column="25" />
-      <File FileName="BJJ/Controllers/HomeController.cs" Line="20" Column="1" />
+      <File FileName="BJJ/Models/Address.cs" Line="5" Column="6" />
+      <File FileName="BJJ/Models/Country.cs" Line="6" Column="34" />
+      <File FileName="BJJ/Controllers/HomeController.cs" Line="21" Column="33" />
+      <File FileName="BJJ/Persistence/AcademyDB.cs" Line="6" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,10 +16,9 @@
               <Node name="Content" expanded="True">
                 <Node name="scripts" expanded="True" />
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
+              <Node name="Persistence" expanded="True">
+                <Node name="AcademyDB.cs" selected="True" />
               </Node>
-              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
@@ -31,9 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/pedrodemirandaarthur/Projects/BJJ/BJJ/Controllers/HomeController.cs" relfile="BJJ/Controllers/HomeController.cs" line="20" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.BJJ PreferredExecutionTarget="MonoDevelop.Default" />

@@ -5,22 +5,30 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
 using BJJ.Models;
+using BJJ.Persistence;
 
 namespace BJJ.Controllers
 {
     public class HomeController : Controller
     {
+        AcademyDB db = new AcademyDB();
+
         public ActionResult Index()
         {
             return View();
         }
 
-		public ActionResult SignUp(Academy academy)
+        public ActionResult SignUp(Academy academy)
 		{
+            string value = "";
             if(academy != null){
-                return RedirectToAction("/Home/Login");
+                value = db.addAcademy(academy);
             }
-            return RedirectToAction("Login");
+            if(value != "Success"){
+                throw new Exception(value);
+            }
+
+            return View("Home");
 		}
     }
 }

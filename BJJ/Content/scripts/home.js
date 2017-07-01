@@ -23,7 +23,7 @@ function login()
 
 function signUp(){
     var data = setAcademyToJSON();
-    $.ajax({         type: "POST",         url: location.protocol + '//' + location.host + "/Home/SignUp/",         contentType: "application/json; charset=utf-8",         data: data,         dataType: "json",         success: function (msg) {                     },         error: function (req, status, error) {             //alert('error:' + error);         }     }); 
+    $.ajax({         type: "POST",         url: location.protocol + '//' + location.host + "/Home/SignUp/",         contentType: "application/json; charset=utf-8",         data: data,         dataType: "json",         success: function (msg) {                     },         error: function (req, status, error) {             alert('error:' + error);         }     }); 
 }
 
 function setAcademyToJSON() {
