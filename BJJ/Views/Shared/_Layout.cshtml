@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <div id="signUp">
+            <div id="signUpForm">
                 <div class="panel panel-default">
                     <div class="panel-heading">Sign Up</div>
                     <div class="panel-body">
@@ -101,9 +101,9 @@
 					        <option>Argentina</option>
 					        <option>Mexico</option>
 					      </select>
-                        <br/>@Html.ActionLink("Login", "Login", "Home", new {@class="btn btn-success"}) 
-                        <button class="btn btn-success" onclick="signUp();">Sign Up</button>
-                        <hr/>
+                        <br/>
+							<a href="javascript:signUp();" class="btn btn-success">Sign Up</a>                        
+							<hr/>
                         <p style="text-align: center;">Already have a account?</p>
                         <p style="text-align: center;">Login <a href="javascript:goToLogin()">here</a>!</p>
                     </div>

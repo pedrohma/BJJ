@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using BJJ.Models;
 
 namespace BJJ.Controllers
 {
@@ -14,9 +15,12 @@ namespace BJJ.Controllers
             return View();
         }
 
-		public ActionResult Login()
+		public ActionResult SignUp(Academy academy)
 		{
-			return View();
+            if(academy != null){
+                return RedirectToAction("/Home/Login");
+            }
+            return RedirectToAction("Login");
 		}
     }
 }
