@@ -1,5 +1,7 @@
 ﻿$(document).ready(function() {
         $("#signUpForm").hide();
+        $("#successSignInDiv").hide();
+        $("#errorSignInDiv").hide();
 });
 
 function goToSignUp()
@@ -23,7 +25,15 @@ function login()
 
 function signUp(){
     var data = setAcademyToJSON();
-    $.ajax({         type: "POST",         url: location.protocol + '//' + location.host + "/Home/SignUp/",         contentType: "application/json; charset=utf-8",         data: data,         dataType: "json",         success: function (msg) {                     },         error: function (req, status, error) {             alert('error:' + error);         }     }); 
+    $.ajax({         type: "POST",         url: location.protocol + '//' + location.host + "/Home/cadastrar",         contentType: "application/json; charset=utf-8",         data: data,         dataType: "json",         success: function (msg) {            if(msg.status == true){
+           $("#successMsgSignIn").text(msg.message);
+           $("#successSignInDiv").show();
+           }
+           else{
+           $("#errorMsgSignIn").text(msg.message);
+                   $("#errorSignInDiv").show();
+           }         },         error: function (req, status, error) {             alert('error:' + error);
+            alert('req.statusText:' + req.responseText);         }     }); 
 }
 
 function setAcademyToJSON() {
@@ -35,11 +45,13 @@ function setAcademyToJSON() {
     var country = $("#country").val();
     var country = {Country: country};
     var address = {Street: street, ZipCode: zipCode};
-    var academy = {AcademyName: academyName, AcademyEmail: academyEmail, Password: password, Address: address, Country: country };
+    var academy = {AcademyName: academyName, AcademyEmail: academyEmail, Password: password };
 
 
     return JSON.stringify({
-        Academy: academy
+        AcademyName: academyName, 
+        AcademyEmail: academyEmail, 
+        Password: password
     });
 }
 
