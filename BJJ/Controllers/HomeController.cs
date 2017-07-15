@@ -21,7 +21,7 @@ namespace BJJ.Controllers
         }
 
         [WebMethod]
-        public ActionResult cadastrar(Academy academy)
+        public ActionResult SignUp(Academy academy)
 		{
             response.status = false;
             if(academy != null){
@@ -37,6 +37,33 @@ namespace BJJ.Controllers
             }
 
             return Json(new { status = response.status, message = response.message }, JsonRequestBehavior.AllowGet);
+		}
+
+		[WebMethod]
+		public ActionResult Login(Academy academy)
+		{
+			response.status = false;
+			if (academy != null)
+			{
+                try{
+					Academy academySession = db.FindAcademy(academy);
+					if (academySession != null)
+					{
+						Session["Academy"] = academySession;
+						response.status = true;
+					}
+					else
+					{
+						throw new Exception("Academy not found. Check your email and password and try again.");
+					}
+                }
+                catch(Exception ex){
+                    string error = ex.Message;
+                    response.message = error;
+                }
+			}
+
+			return Json(new { status = response.status, message = response.message }, JsonRequestBehavior.AllowGet);
 		}
     }
 }

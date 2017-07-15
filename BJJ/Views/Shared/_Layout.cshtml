@@ -62,13 +62,22 @@
                     <div class="panel-heading">Login</div>
                     <div class="panel-body">
                         <label>Login</label>
-                        <input type="text" class="form-control" id="login" />
+                        <input type="text" class="form-control" id="emailLogin" />
                         <br/>
                         <label>Senha</label>
                         <input type="password" class="form-control" id="passwordLogin" />
                         <br/>
                         <button class="btn btn-success" onclick="login();">Login</button>
                         <hr/>
+							<div class="alert alert-success alert-dismissable" id="successLoginDiv">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          <strong>Success!</strong><span id="successMsgLogin"></span>
+                        </div>
+
+                            <div class="alert alert-danger fade in" id="errorLoginDiv">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          <strong>Error!</strong><span id="errorMsgLogin"></span>
+                        </div>
                         <p style="text-align: center;">Don't have an account yet?</p>
                         <p style="text-align: center;">Create a new one <a href="javascript:goToSignUp()">here</a>!</p>
                     </div>

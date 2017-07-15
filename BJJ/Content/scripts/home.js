@@ -2,6 +2,8 @@
         $("#signUpForm").hide();
         $("#successSignInDiv").hide();
         $("#errorSignInDiv").hide();
+        $("#errorLoginDiv").hide();
+        $("#successLoginDiv").hide();
 });
 
 function goToSignUp()
@@ -25,12 +27,12 @@ function login()
 
 function signUp(){
     var data = setAcademyToJSON();
-    $.ajax({         type: "POST",         url: location.protocol + '//' + location.host + "/Home/cadastrar",         contentType: "application/json; charset=utf-8",         data: data,         dataType: "json",         success: function (msg) {            if(msg.status == true){
-           $("#successMsgSignIn").text(msg.message);
+    $.ajax({         type: "POST",         url: location.protocol + '//' + location.host + "/Home/SignUp",         contentType: "application/json; charset=utf-8",         data: data,         dataType: "json",         success: function (msg) {            if(msg.status == true){
+           $("#successMsgSignIn").text(" " + msg.message);
            $("#successSignInDiv").show();
            }
            else{
-           $("#errorMsgSignIn").text(msg.message);
+           $("#errorMsgSignIn").text(" " + msg.message);
                    $("#errorSignInDiv").show();
            }         },         error: function (req, status, error) {             alert('error:' + error);
             alert('req.statusText:' + req.responseText);         }     }); 
@@ -55,3 +57,38 @@ function setAcademyToJSON() {
     });
 }
 
+function login(){
+    var data = loginAcademyToJSON();
+    alert(data);
+    $.ajax({
+        type: "POST",
+        url: location.protocol + '//' + location.host + "/Home/Login",
+        contentType: "application/json; charset=utf-8",
+        data: data,
+        dataType: "json",
+        success: function (msg) {
+           if(msg.status == true){
+           alert('user logged in');
+           }
+           else{
+           $("#errorLoginDiv").show();
+           $("#errorMsgLogin").text(" " + msg.message);   
+           }
+        },
+        error: function (req, status, error) {
+            alert('error:' + error);
+            alert('req.statusText:' + req.responseText);
+        }
+    });
+
+}
+
+function loginAcademyToJSON() {
+    var academyEmail = $("#emailLogin").val();
+    var password = $("#passwordLogin").val();
+
+    return JSON.stringify({
+        AcademyEmail: academyEmail, 
+        Password: password
+    });
+}

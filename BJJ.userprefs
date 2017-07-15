@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{4E7FC757-6BD4-4CD7-9666-09AE1CDB3C4A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BJJ/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BJJ/Persistence/AcademyDB.cs">
     <Files>
-      <File FileName="BJJ/Content/scripts/home.js" Line="35" Column="20" />
-      <File FileName="BJJ/Models/Response.cs" Line="7" Column="43" />
-      <File FileName="BJJ/Controllers/HomeController.cs" Line="33" Column="41" />
+      <File FileName="BJJ/Content/scripts/home.js" Line="100" Column="38" />
+      <File FileName="BJJ/Controllers/HomeController.cs" Line="49" Column="45" />
+      <File FileName="BJJ/Views/Shared/_Layout.cshtml" Line="74" Column="34" />
+      <File FileName="BJJ/Persistence/AcademyDB.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/pedrodemirandaarthur/Projects/BJJ/BJJ/Content/scripts/home.js" relfile="BJJ/Content/scripts/home.js" line="36" column="1" />
+      <Breakpoint file="/Users/pedrodemirandaarthur/Projects/BJJ/BJJ/Controllers/HomeController.cs" relfile="BJJ/Controllers/HomeController.cs" line="45" column="1" />
+      <Breakpoint file="/Users/pedrodemirandaarthur/Projects/BJJ/BJJ/Persistence/AcademyDB.cs" relfile="BJJ/Persistence/AcademyDB.cs" line="34" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

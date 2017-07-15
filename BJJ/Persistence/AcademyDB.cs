@@ -26,5 +26,24 @@ namespace BJJ.Persistence
 			}
             return value;
         }
+
+        internal Academy FindAcademy(Academy academy){
+            Academy academySession = null;
+            try{
+                if(academy != null){
+                    academySession = listAcademy.Find(a => a.AcademyEmail.Equals(academy.AcademyEmail) && a.Password.Equals(academy.Password));
+                    if(academySession != null){
+                        return academySession;
+                    }
+                    else{
+                        throw new Exception("Academy not found.");
+                    }
+                }
+            }
+            catch(Exception ex){
+				string error = ex.Message;
+            }
+            return academySession;
+        }
     }
 }
